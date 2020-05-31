@@ -3,3 +3,12 @@ F:\Visual Studio\AppSql\AppSql\obj\Debug\AppSql.Form1.resources
 F:\Visual Studio\AppSql\AppSql\obj\Debug\AppSql.Properties.Resources.resources
 F:\Visual Studio\AppSql\AppSql\obj\Debug\AppSql.csproj.GenerateResource.cache
 F:\Visual Studio\AppSql\AppSql\obj\Debug\AppSql.csproj.CoreCompileInputs.cache
+D:\Visual Studio\AnalysisDB\AppSql\bin\Debug\AppSql.exe
+D:\Visual Studio\AnalysisDB\AppSql\bin\Debug\AppSql.pdb
+D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.csprojAssemblyReference.cache
+D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.Form1.resources
+D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.Properties.Resources.resources
+D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.csproj.GenerateResource.cache
+D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.csproj.CoreCompileInputs.cache
+D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.exe
+D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.pdb

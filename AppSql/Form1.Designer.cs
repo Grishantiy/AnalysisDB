@@ -129,11 +129,11 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.comboBoxDB);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.comboBoxServer);
             this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.passDB);
             this.panel1.Controls.Add(this.userDB);
             this.panel1.Controls.Add(this.labelConnDB);
@@ -156,11 +156,12 @@
             // 
             this.comboBoxDB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDB.FormattingEnabled = true;
-            this.comboBoxDB.Location = new System.Drawing.Point(36, 45);
+            this.comboBoxDB.Location = new System.Drawing.Point(36, 96);
             this.comboBoxDB.Name = "comboBoxDB";
             this.comboBoxDB.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDB.TabIndex = 7;
             this.comboBoxDB.DropDown += new System.EventHandler(this.comboBoxDB_DropDown);
+            this.comboBoxDB.SelectedIndexChanged += new System.EventHandler(this.comboBoxDB_SelectedIndexChanged);
             // 
             // comboBoxServer
             // 
@@ -182,11 +183,12 @@
             this.buttonLogin.TabIndex = 6;
             this.buttonLogin.Text = "Подключиться";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::AppSql.Properties.Resources._lock;
-            this.pictureBox3.Location = new System.Drawing.Point(8, 93);
+            this.pictureBox3.Location = new System.Drawing.Point(8, 68);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(18, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -196,7 +198,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::AppSql.Properties.Resources.login;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 67);
+            this.pictureBox2.Location = new System.Drawing.Point(8, 42);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -206,7 +208,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AppSql.Properties.Resources.database;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 97);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(19, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -215,7 +217,7 @@
             // 
             // passDB
             // 
-            this.passDB.Location = new System.Drawing.Point(36, 94);
+            this.passDB.Location = new System.Drawing.Point(36, 70);
             this.passDB.Name = "passDB";
             this.passDB.Size = new System.Drawing.Size(121, 20);
             this.passDB.TabIndex = 3;
@@ -223,7 +225,7 @@
             // 
             // userDB
             // 
-            this.userDB.Location = new System.Drawing.Point(36, 69);
+            this.userDB.Location = new System.Drawing.Point(36, 45);
             this.userDB.Name = "userDB";
             this.userDB.Size = new System.Drawing.Size(121, 20);
             this.userDB.TabIndex = 2;
@@ -286,16 +288,16 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridEnegryRes;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox passDB;
-        private System.Windows.Forms.TextBox userDB;
+        public System.Windows.Forms.TextBox passDB;
+        public System.Windows.Forms.TextBox userDB;
         private System.Windows.Forms.Label labelConnDB;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.ComboBox comboBoxServer;
+        public System.Windows.Forms.ComboBox comboBoxServer;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.ComboBox comboBoxDB;
+        public System.Windows.Forms.ComboBox comboBoxDB;
     }
 }
 
