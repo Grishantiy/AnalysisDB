@@ -38,24 +38,31 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.comboBoxDB = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxServer = new System.Windows.Forms.ComboBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.passDB = new System.Windows.Forms.TextBox();
             this.userDB = new System.Windows.Forms.TextBox();
             this.labelConnDB = new System.Windows.Forms.Label();
             this.dataGridEnegryRes = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboxQuery = new System.Windows.Forms.ComboBox();
+            this.labelQuery = new System.Windows.Forms.Label();
+            this.labelChannel = new System.Windows.Forms.Label();
+            this.comboboxChannel = new System.Windows.Forms.ComboBox();
+            this.buttonQuery = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEnegryRes)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -114,6 +121,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.MintCream;
+            this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.dataGridEnegryRes);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -163,6 +171,16 @@
             this.comboBoxDB.DropDown += new System.EventHandler(this.comboBoxDB_DropDown);
             this.comboBoxDB.SelectedIndexChanged += new System.EventHandler(this.comboBoxDB_SelectedIndexChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AppSql.Properties.Resources.database;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 97);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(19, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // comboBoxServer
             // 
             this.comboBoxServer.FormattingEnabled = true;
@@ -205,16 +223,6 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AppSql.Properties.Resources.database;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 97);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // passDB
             // 
             this.passDB.Location = new System.Drawing.Point(36, 70);
@@ -245,10 +253,75 @@
             this.dataGridEnegryRes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridEnegryRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridEnegryRes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridEnegryRes.Location = new System.Drawing.Point(3, 251);
+            this.dataGridEnegryRes.Location = new System.Drawing.Point(3, 175);
             this.dataGridEnegryRes.Name = "dataGridEnegryRes";
-            this.dataGridEnegryRes.Size = new System.Drawing.Size(786, 383);
+            this.dataGridEnegryRes.Size = new System.Drawing.Size(786, 459);
             this.dataGridEnegryRes.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightGreen;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.buttonQuery);
+            this.panel2.Controls.Add(this.comboboxChannel);
+            this.panel2.Controls.Add(this.labelChannel);
+            this.panel2.Controls.Add(this.labelQuery);
+            this.panel2.Controls.Add(this.comboxQuery);
+            this.panel2.Location = new System.Drawing.Point(224, 9);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(533, 160);
+            this.panel2.TabIndex = 2;
+            // 
+            // comboxQuery
+            // 
+            this.comboxQuery.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxQuery.FormattingEnabled = true;
+            this.comboxQuery.Items.AddRange(new object[] {
+            "Кол-во сч-ков (дни и время вставки)"});
+            this.comboxQuery.Location = new System.Drawing.Point(17, 25);
+            this.comboxQuery.Name = "comboxQuery";
+            this.comboxQuery.Size = new System.Drawing.Size(250, 21);
+            this.comboxQuery.TabIndex = 8;
+            // 
+            // labelQuery
+            // 
+            this.labelQuery.AutoSize = true;
+            this.labelQuery.Location = new System.Drawing.Point(14, 9);
+            this.labelQuery.Name = "labelQuery";
+            this.labelQuery.Size = new System.Drawing.Size(91, 13);
+            this.labelQuery.TabIndex = 9;
+            this.labelQuery.Text = "Выбор проверки";
+            // 
+            // labelChannel
+            // 
+            this.labelChannel.AutoSize = true;
+            this.labelChannel.Location = new System.Drawing.Point(14, 56);
+            this.labelChannel.Name = "labelChannel";
+            this.labelChannel.Size = new System.Drawing.Size(79, 13);
+            this.labelChannel.TabIndex = 10;
+            this.labelChannel.Text = "Выбор канала";
+            // 
+            // comboboxChannel
+            // 
+            this.comboboxChannel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxChannel.FormattingEnabled = true;
+            this.comboboxChannel.Location = new System.Drawing.Point(17, 74);
+            this.comboboxChannel.Name = "comboboxChannel";
+            this.comboboxChannel.Size = new System.Drawing.Size(165, 21);
+            this.comboboxChannel.TabIndex = 11;
+            this.comboboxChannel.DropDown += new System.EventHandler(this.comboboxChannel_DropDown);
+            // 
+            // buttonQuery
+            // 
+            this.buttonQuery.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonQuery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonQuery.ForeColor = System.Drawing.Color.Black;
+            this.buttonQuery.Location = new System.Drawing.Point(82, 125);
+            this.buttonQuery.Name = "buttonQuery";
+            this.buttonQuery.Size = new System.Drawing.Size(100, 23);
+            this.buttonQuery.TabIndex = 12;
+            this.buttonQuery.Text = "Запросить";
+            this.buttonQuery.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -268,10 +341,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEnegryRes)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,6 +373,12 @@
         public System.Windows.Forms.ComboBox comboBoxServer;
         private System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.ComboBox comboBoxDB;
+        private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.ComboBox comboxQuery;
+        private System.Windows.Forms.Label labelChannel;
+        private System.Windows.Forms.Label labelQuery;
+        private System.Windows.Forms.Button buttonQuery;
+        public System.Windows.Forms.ComboBox comboboxChannel;
     }
 }
 

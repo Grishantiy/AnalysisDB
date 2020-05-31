@@ -149,6 +149,54 @@ namespace AppSql
                 MessageBox.Show("Данные введены неправильно или нет связи с базой");
                 return;
             }
+            db.closeConnection();
+        }
+
+        private void comboboxChannel_DropDown(object sender, EventArgs e)
+        {
+            if (comboBoxServer.Text == "")
+            {
+                MessageBox.Show("Введите имя или ip сервера");
+                return;
+            }
+            if (passDB.Text == "")
+            {
+                MessageBox.Show("Введите пароль");
+                return;
+            }
+            if (userDB.Text == "")
+            {
+                MessageBox.Show("Введите имя пользователя");
+                return;
+            }
+            if (comboBoxDB.Text == "")
+            {
+                MessageBox.Show("Запросите имя базы данных");
+                return;
+            }
+
+            DB.server = comboBoxServer.Text;
+            DB.login = userDB.Text;
+            DB.password = passDB.Text;
+            DB.database = comboBoxDB.Text;
+
+            DB db = new DB();
+
+            string queryString = "Select NAME_OBJECT from OBJECTS WHERE IDTYPE_OBJECT='1'";
+
+            SqlCommand command = new SqlCommand(queryString, db.openConnection());
+
+            SqlDataReader reader = command.ExecuteReader();
+          
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    comboboxChannel.Items.Add(reader.GetValue(0));
+                }
+            }
+            reader.Close();        
+     
         }
     }
 }
