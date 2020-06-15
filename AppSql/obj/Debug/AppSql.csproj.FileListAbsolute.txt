@@ -12,3 +12,9 @@ D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.csproj.GenerateResource.cach
 D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.csproj.CoreCompileInputs.cache
 D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.exe
 D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.pdb
+F:\Visual Studio\AppSql\AppSql\bin\Debug\AppSql.exe
+F:\Visual Studio\AppSql\AppSql\bin\Debug\AppSql.pdb
+F:\Visual Studio\AppSql\AppSql\obj\Debug\AppSql.exe
+F:\Visual Studio\AppSql\AppSql\obj\Debug\AppSql.pdb
+F:\Visual Studio\AppSql\AppSql\obj\Debug\AppSql.Sign.resources
+D:\Visual Studio\AnalysisDB\AppSql\obj\Debug\AppSql.Sign.resources

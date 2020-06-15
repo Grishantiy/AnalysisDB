@@ -1,0 +1,9 @@
+F:\Visual Studio\AppSql\AppSql\bin\x86\Release\AppSql.exe
+F:\Visual Studio\AppSql\AppSql\bin\x86\Release\AppSql.pdb
+F:\Visual Studio\AppSql\AppSql\obj\x86\Release\AppSql.Form1.resources
+F:\Visual Studio\AppSql\AppSql\obj\x86\Release\AppSql.Properties.Resources.resources
+F:\Visual Studio\AppSql\AppSql\obj\x86\Release\AppSql.csproj.GenerateResource.cache
+F:\Visual Studio\AppSql\AppSql\obj\x86\Release\AppSql.csproj.CoreCompileInputs.cache
+F:\Visual Studio\AppSql\AppSql\obj\x86\Release\AppSql.exe
+F:\Visual Studio\AppSql\AppSql\obj\x86\Release\AppSql.pdb
+F:\Visual Studio\AppSql\AppSql\obj\x86\Release\AppSql.Sign.resources

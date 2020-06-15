@@ -20,30 +20,61 @@ namespace AppSql
         public static string database { get; set; }
         public static string connectionString = "Server=" + server + ";user id =" + login + "; password=" + password + ";Initial Catalog = " + database + ";";
 
-        SqlConnection connection = new SqlConnection( new SqlConnectionStringBuilder()
+        SqlConnection connection = new SqlConnection(new SqlConnectionStringBuilder()
         {
-         DataSource = server,
-         InitialCatalog = database,
-         UserID = login,
-         Password = password
+            DataSource = server,
+            InitialCatalog = database,
+            UserID = login,
+            Password = password
         }.ConnectionString
         );
 
         public SqlConnection openConnection()
         {
-            
-            if (connection.State == System.Data.ConnectionState.Closed)
-                connection.Open();
-            return connection;
+            try
+            {
+                if (connection.State == System.Data.ConnectionState.Closed)
+                    connection.Open();
+                return connection;
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+                return connection;
+            }
         }
         public void closeConnection()
         {
             if (connection.State == System.Data.ConnectionState.Open)
                 connection.Close();
         }
-        public SqlConnection GetConnection() 
+        public SqlConnection GetConnection()
         {
             return connection;
+        }
+
+        public DataTable getData(string queryString)
+        {
+            DataTable table = new DataTable();
+            try
+            {
+                SqlCommand command = new SqlCommand(queryString, openConnection());
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    table.Load(reader);
+                    closeConnection();
+                }
+                else
+                {
+                    MessageBox.Show("Запрос не дал результата");
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return table;
         }
 
     }
